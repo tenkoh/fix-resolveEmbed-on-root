@@ -5,6 +5,7 @@ RUN git clone https://go.googlesource.com/go
 
 # build after fixing pkg.go
 COPY ./src/pkg.go ./go/src/cmd/go/internal/load
+COPY ./src/path.go ./go/src/cmd/go/internal/str
 WORKDIR /build/go/src
 RUN ./make.bash
 
